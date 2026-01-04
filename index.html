@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doctor Appointment System – Documentation</title>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- Floating WhatsApp Button (optional) -->
+  <button class="whatsapp-float" type="button" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Chat with Support</span>
+  </button>
+
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <div class="container">
+      <div class="hero-content">
+        <h1>
+          <i class="fas fa-user-doctor"></i>
+          Doctor Appointment System
+        </h1>
+
+        <p class="hero-tagline">
+          Book appointments. Manage schedules. Simplify healthcare workflow.
+        </p>
+
+        <p class="hero-description">
+          <strong>Doctor Appointment System</strong> is a full-stack web application built with
+          <strong>React</strong> (frontend), <strong>Node.js + Express</strong> (backend), and
+          <strong>MongoDB</strong> (database). It supports patient booking, doctor availability,
+          admin management, authentication, and appointment lifecycle tracking.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#" class="btn">
+            <i class="fas fa-eye"></i>
+            Live Demo
+          </a>
+          <a href="#installation" class="btn btn-outline">
+            <i class="fas fa-rocket"></i>
+            Quick Start
+          </a>
+        </div>
+
+        <!-- Hero stats -->
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <i class="fas fa-layer-group"></i>
+            <span class="number">3+</span>
+            <span class="label">User Roles</span>
+          </div>
+          <div class="hero-stat">
+            <i class="fas fa-shield-halved"></i>
+            <span class="number">100%</span>
+            <span class="label">Auth Protected</span>
+          </div>
+          <div class="hero-stat">
+            <i class="fas fa-calendar-check"></i>
+            <span class="number">10+</span>
+            <span class="label">Core Features</span>
+          </div>
+          <div class="hero-stat">
+            <i class="fas fa-headset"></i>
+            <span class="number">6</span>
+            <span class="label">Months Support</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main-content">
+    <div class="container">
+
+      <!-- OVERVIEW -->
+      <section class="enhanced-container" id="overview">
+        <div class="section-title">
+          <h2>
+            <i class="fas fa-info-circle"></i>
+            Project Overview
+          </h2>
+        </div>
+
+        <p class="lead-paragraph">
+          <i class="fas fa-check-circle"></i>
+          This system helps clinics/hospitals manage appointments and reduce manual scheduling.
+          Patients can register, browse doctors, pick a slot, and track bookings.
+        </p>
+
+        <p class="lead-paragraph">
+          <i class="fas fa-check-circle"></i>
+          Doctors can manage profiles, set availability, view upcoming appointments, and update status
+          (approved, completed, canceled).
+        </p>
+
+        <p class="lead-paragraph">
+          <i class="fas fa-check-circle"></i>
+          Admin can manage doctors, patients, specialties, and appointment records from a central dashboard.
+        </p>
+      </section>
+
+      <!-- QUICK STATS -->
+      <section class="section">
+        <div class="stats-container">
+          <article class="stat-card">
+            <i class="fas fa-users"></i>
+            <span class="stat-number">3</span>
+            <span class="stat-label">Roles: Patient, Doctor, Admin</span>
+          </article>
+
+          <article class="stat-card">
+            <i class="fas fa-sitemap"></i>
+            <span class="stat-number">2</span>
+            <span class="stat-label">Apps: Frontend + Backend API</span>
+          </article>
+
+          <article class="stat-card">
+            <i class="fas fa-database"></i>
+            <span class="stat-number">1</span>
+            <span class="stat-label">Database: MongoDB</span>
+          </article>
+
+          <article class="stat-card">
+            <i class="fas fa-sliders"></i>
+            <span class="stat-number">1</span>
+            <span class="stat-label">Central Theme: Deep Sky Blue + White</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section id="features" class="section">
+        <div class="section-title">
+          <h2>
+            <i class="fas fa-star"></i>
+            Key Features
+          </h2>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-icon"><i class="fab fa-react"></i></div>
+            <h3>React Frontend</h3>
+            <p>Modern UI for booking, dashboards, forms, and role-based screens.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon"><i class="fab fa-node-js"></i></div>
+            <h3>Node.js + Express API</h3>
+            <p>REST API for auth, doctors, appointments, availability, and admin actions.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon"><i class="fas fa-database"></i></div>
+            <h3>MongoDB Database</h3>
+            <p>Mongoose models for Users, Doctors, Schedules, Appointments, and Reviews.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon"><i class="fas fa-user-lock"></i></div>
+            <h3>Authentication & Roles</h3>
+            <p>JWT-based login and protected routes for Patient / Doctor / Admin.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon"><i class="fas fa-calendar-days"></i></div>
+            <h3>Appointment Booking</h3>
+            <p>Choose doctor, date, time slot, reason, and confirm booking.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon"><i class="fas fa-bell"></i></div>
+            <h3>Status & Notifications</h3>
+            <p>Track booking status (Pending / Approved / Completed / Cancelled).</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon"><i class="fas fa-user-doctor"></i></div>
+            <h3>Doctor Availability</h3>
+            <p>Create weekly schedules, slot limits, and holidays/unavailable days.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+            <h3>Admin Dashboard</h3>
+            <p>Manage doctors, specialties, users, and appointment history from one panel.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon"><i class="fas fa-shield-heart"></i></div>
+            <h3>Validation & Security</h3>
+            <p>Input validation, API rate limiting (optional), and secure env configs.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- INCLUDED PAGES (NO IMAGES, COLOR BLOCKS) -->
+      <section id="pages" class="section">
+        <div class="section-title">
+          <h2>
+            <i class="fas fa-desktop"></i>
+            Included Pages / Screens
+          </h2>
+        </div>
+
+        <div class="demo-pages">
+          <article class="demo-card">
+            <div class="demo-swatch swatch-1"></div>
+            <div class="demo-content">
+              <h3>Landing / Home</h3>
+              <p>Hero, specialties, top doctors, how booking works, FAQ, and CTA.</p>
+              <p class="demo-file"><strong>Route:</strong> <code>/</code></p>
+            </div>
+          </article>
+
+          <article class="demo-card">
+            <div class="demo-swatch swatch-2"></div>
+            <div class="demo-content">
+              <h3>Doctors Directory</h3>
+              <p>Search/filter doctors by specialty, fee range, and availability.</p>
+              <p class="demo-file"><strong>Route:</strong> <code>/doctors</code></p>
+            </div>
+          </article>
+
+          <article class="demo-card">
+            <div class="demo-swatch swatch-3"></div>
+            <div class="demo-content">
+              <h3>Doctor Profile</h3>
+              <p>Doctor bio, specialties, clinic info, schedule, reviews, book button.</p>
+              <p class="demo-file"><strong>Route:</strong> <code>/doctors/:id</code></p>
+            </div>
+          </article>
+
+          <article class="demo-card">
+            <div class="demo-swatch swatch-4"></div>
+            <div class="demo-content">
+              <h3>Booking</h3>
+              <p>Select date + slot, enter patient info/reason, confirm appointment.</p>
+              <p class="demo-file"><strong>Route:</strong> <code>/book/:doctorId</code></p>
+            </div>
+          </article>
+
+          <article class="demo-card">
+            <div class="demo-swatch swatch-5"></div>
+            <div class="demo-content">
+              <h3>Patient Dashboard</h3>
+              <p>Upcoming appointments, history, status tracking, cancel requests.</p>
+              <p class="demo-file"><strong>Route:</strong> <code>/dashboard/patient</code></p>
+            </div>
+          </article>
+
+          <article class="demo-card">
+            <div class="demo-swatch swatch-6"></div>
+            <div class="demo-content">
+              <h3>Doctor Dashboard</h3>
+              <p>Manage availability, view bookings, approve/complete/cancel.</p>
+              <p class="demo-file"><strong>Route:</strong> <code>/dashboard/doctor</code></p>
+            </div>
+          </article>
+
+          <article class="demo-card">
+            <div class="demo-swatch swatch-7"></div>
+            <div class="demo-content">
+              <h3>Admin Panel</h3>
+              <p>Manage doctors, specialties, users, and system-wide appointments.</p>
+              <p class="demo-file"><strong>Route:</strong> <code>/dashboard/admin</code></p>
+            </div>
+          </article>
+
+          <article class="demo-card">
+            <div class="demo-swatch swatch-8"></div>
+            <div class="demo-content">
+              <h3>Auth Pages</h3>
+              <p>Login, Register, Forgot Password (optional), role redirects.</p>
+              <p class="demo-file"><strong>Routes:</strong> <code>/login</code>, <code>/register</code></p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- INSTALLATION -->
+      <section id="installation" class="section">
+        <div class="section-title">
+          <h2>
+            <i class="fas fa-gears"></i>
+            Installation & Run
+          </h2>
+        </div>
+
+        <div class="enhanced-container">
+          <h3 class="subheading">
+            <i class="fas fa-folder-tree"></i>
+            Prerequisites
+          </h3>
+          <ul class="list">
+            <li><strong>Node.js</strong> (LTS recommended)</li>
+            <li><strong>MongoDB</strong> (local or Atlas)</li>
+            <li><strong>npm</strong> or <strong>yarn</strong></li>
+          </ul>
+        </div>
+
+        <div class="enhanced-container container-light">
+          <h3 class="subheading">
+            <i class="fas fa-terminal"></i>
+            Backend Setup (Node + Express)
+          </h3>
+
+          <pre class="code-block"><code>cd server
+npm install
+
+# create .env
+# see env section below
+
+npm run dev</code></pre>
+
+          <p class="note">
+            Backend will start on something like <code>http://localhost:5000</code>
+          </p>
+        </div>
+
+        <div class="enhanced-container container-light">
+          <h3 class="subheading">
+            <i class="fab fa-react"></i>
+            Frontend Setup (React)
+          </h3>
+
+          <pre class="code-block"><code>cd client
+npm install
+
+# (optional) create .env
+# VITE_API_URL=http://localhost:5000 or REACT_APP_API_URL=...
+
+npm start</code></pre>
+
+          <p class="note">
+            Frontend will start on <code>http://localhost:3000</code> (React) or <code>5173</code> (Vite).
+          </p>
+        </div>
+
+        <div class="enhanced-container">
+          <h3 class="subheading">
+            <i class="fas fa-key"></i>
+            Environment Variables (.env)
+          </h3>
+
+          <pre class="code-block"><code># server/.env
+PORT=5000
+MONGO_URI=mongodb+srv://USER:PASSWORD@cluster.mongodb.net/doctor-appointments
+JWT_SECRET=your_super_secret_key
+
+# optional
+CORS_ORIGIN=http://localhost:3000</code></pre>
+        </div>
+      </section>
+
+      <!-- API -->
+      <section id="api" class="section">
+        <div class="section-title">
+          <h2>
+            <i class="fas fa-code"></i>
+            API Overview (Example)
+          </h2>
+        </div>
+
+        <div class="enhanced-container">
+          <p class="lead-paragraph">
+            Your endpoints may vary, but this is a clean structure to document:
+          </p>
+
+          <div class="api-grid">
+            <div class="api-card">
+              <h4><i class="fas fa-user-lock"></i> Auth</h4>
+              <ul class="list">
+                <li><code>POST /api/auth/register</code></li>
+                <li><code>POST /api/auth/login</code></li>
+                <li><code>GET /api/auth/me</code></li>
+              </ul>
+            </div>
+
+            <div class="api-card">
+              <h4><i class="fas fa-user-doctor"></i> Doctors</h4>
+              <ul class="list">
+                <li><code>GET /api/doctors</code></li>
+                <li><code>GET /api/doctors/:id</code></li>
+                <li><code>POST /api/doctors</code> (admin)</li>
+              </ul>
+            </div>
+
+            <div class="api-card">
+              <h4><i class="fas fa-calendar-check"></i> Appointments</h4>
+              <ul class="list">
+                <li><code>POST /api/appointments</code></li>
+                <li><code>GET /api/appointments/my</code></li>
+                <li><code>PATCH /api/appointments/:id/status</code></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STRUCTURE -->
+      <section id="assets" class="section">
+        <div class="section-title">
+          <h2>
+            <i class="fas fa-folder-open"></i>
+            Project Structure
+          </h2>
+        </div>
+
+        <div class="enhanced-container">
+          <h3 class="subheading">
+            <i class="fas fa-sitemap"></i>
+            Suggested Folder Structure
+          </h3>
+
+          <pre class="code-block"><code>doctor-appointment-system/
+├── client/                    # React app
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── routes/
+│   │   ├── services/          # API calls
+│   │   ├── context/           # auth/user state
+│   │   └── styles/
+│   └── package.json
+├── server/                    # Node + Express API
+│   ├── src/
+│   │   ├── config/            # db config
+│   │   ├── middleware/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   ├── controllers/
+│   │   └── utils/
+│   ├── .env
+│   └── package.json
+└── Documentation/
+    ├── index.html
+    └── assets/
+        ├── css/style.css
+        └── js/script.js</code></pre>
+        </div>
+
+        <div class="enhanced-container">
+          <h3 class="subheading">
+            <i class="fas fa-palette"></i>
+            Customizing Theme Colors
+          </h3>
+          <p>
+            Update the color variables in <code>Documentation/assets/css/style.css</code>
+            (Deep Sky Blue + White).
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- SUPPORT -->
+    <section id="support" class="support-section">
+      <div class="container">
+        <div class="support-content">
+          <h2>
+            <i class="fas fa-headset"></i>
+            Support & Customization Help
+          </h2>
+          <p>
+            For installation support, deployment help, bug reports, or custom feature requests,
+            use the contact form below. Please include your project name and clear steps to reproduce.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#" class="btn btn-secondary" id="openSupportFormBtn">
+              <i class="fas fa-envelope"></i>
+              Contact Support
+            </a>
+            <a href="#top" class="btn btn-outline">
+              <i class="fas fa-arrow-up"></i>
+              Back to Top
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Support Modal -->
+      <div class="support-modal-overlay" id="supportModal" aria-hidden="true">
+        <div class="support-modal" role="dialog" aria-modal="true">
+          <button
+            class="support-modal-close"
+            id="closeSupportModalBtn"
+            aria-label="Close support form"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+
+          <h3>
+            <i class="fas fa-life-ring"></i>
+            Contact Support
+          </h3>
+
+          <form id="supportContactForm">
+            <div class="form-group">
+              <label for="supportEmail">Your Email</label>
+              <input
+                type="email"
+                id="supportEmail"
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="supportMessage">Message</label>
+              <textarea
+                id="supportMessage"
+                rows="5"
+                placeholder="Describe your issue / request..."
+                required
+              ></textarea>
+            </div>
+
+            <div class="support-form-actions">
+              <button type="submit" class="btn btn-secondary btn-small">
+                <i class="fas fa-paper-plane"></i>
+                Send
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline btn-small"
+                id="cancelSupportFormBtn"
+              >
+                Cancel
+              </button>
+            </div>
+          </form>
+          <p class="support-hint">
+            (This opens Gmail compose like your previous documentation behavior.) 
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="logo">
+        <i class="fas fa-user-doctor"></i>
+        Doctor<span>Appoint</span>
+      </div>
+
+      <ul class="footer-links">
+        <li><a href="#overview"><i class="fas fa-eye"></i> Overview</a></li>
+        <li><a href="#features"><i class="fas fa-star"></i> Features</a></li>
+        <li><a href="#pages"><i class="fas fa-desktop"></i> Pages</a></li>
+        <li><a href="#installation"><i class="fas fa-gears"></i> Install</a></li>
+        <li><a href="#api"><i class="fas fa-code"></i> API</a></li>
+        <li><a href="#assets"><i class="fas fa-folder-open"></i> Structure</a></li>
+        <li><a href="#support"><i class="fas fa-headset"></i> Support</a></li>
+      </ul>
+
+      <div class="copyright">
+        <i class="far fa-copyright"></i>
+        2026 MiahIT Inc. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- MAIN JS -->
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
